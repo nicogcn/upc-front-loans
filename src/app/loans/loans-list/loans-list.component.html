@@ -1,0 +1,10 @@
+<p>
+  loans-list works!
+</p>
+<ul *ngIf="loansObservable | async as loans else empty">
+  <li *ngFor="let loan of loans">
+    <p>{{ loan.practics }}</p>
+    <p>{{ loan.practics }}</p>
+  </li>
+</ul>
+<ng-template #empty> No loans Yet </ng-template>
