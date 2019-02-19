@@ -1,0 +1,18 @@
+<p>
+  students-list works!
+</p>
+<p>
+  students works!
+</p>
+<ul *ngIf="studentsObservable | async as students else empty">
+  <li *ngFor="let student of students">
+    <p>{{ student.idStudent }}</p>
+    <p>{{ student.document }}</p>
+    <p>{{ student.firstName }}</p>
+    <p>{{ student.lastName }}</p>
+    <p>{{ student.program }}</p>
+    <p>{{ student.code }}</p>
+    <p>{{ student.age }}</p>
+  </li>
+</ul>
+<ng-template #empty> No students Yet </ng-template>
