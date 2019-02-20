@@ -4,7 +4,10 @@
 <ul *ngIf="loansObservable | async as loans else empty">
   <li *ngFor="let loan of loans">
     <p>{{ loan.practics }}</p>
-    <p>{{ loan.practics }}</p>
+    <p>{{ loan.estado }}</p>
+    <ul *ngIf="loan.materials">
+      <li *ngFor="let m of loan.materials"><p>{{ m.nameMaterial }}</p></li>
+    </ul>
   </li>
 </ul>
 <ng-template #empty> No loans Yet </ng-template>
